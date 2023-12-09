@@ -1,6 +1,6 @@
 import React from "react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
-import FeaturedProductTitle from "./FeaturedProductTitle";
+ 
 import { FeatureProduct } from "@/data/FeaturedProductData";
 import Image from "next/image";
 import { buttonVariants } from "../ui/button";
