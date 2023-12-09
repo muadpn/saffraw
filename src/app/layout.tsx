@@ -20,6 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="UBwky1Rm6wOZAv6AJZDnHmSScAzhEzlTT4ajCidB07k"
+        />
+      </head>
       <body className={`${manrope.className} relative md:px-2`}>
         <ThemeProvider
           attribute="class"
