@@ -24,11 +24,10 @@ const ProductBenefit = ({
   image,
   titleImage,
 }: BenefitsData) => {
-  console.log(color.substring(2))
   return (
     <>
       <MaxWidthWrapper>
-      {/* {Overlay} */}
+        {/* {Overlay} */}
         <div className="pb-24 md:py-2">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div>
