@@ -2,26 +2,150 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --text-yellow: 47, 96%, 59%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --text-yellow: 47, 96%, 59%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    /* scroll-behavior: smooth; */
+    @apply bg-background text-foreground;
+  }
 }
+
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--background) / 0.9) 0%,
+    rgba(2, 2, 2, 0.76) 36.98%,
+    rgba(32, 31, 31, 0.54) 64.06%,
+    rgba(11, 11, 11, 0.51) 73.96%,
+    rgba(32, 31, 31, 0) 100%
+  );
+}
+.scroll-container,
+.scroll-area {
+  max-width: 100%;
+  /* max-height: 100svh; */
+  min-height: 100svh;
+}
+.scroll-container {
+  max-width: 100%;
+  max-height: 100svh;
+  min-height: 100svh;
+  /* max-height: ; */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-area {
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  margin-bottom: 7rem;
+  scroll-snap-stop: always;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.shilajit-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(17, 17, 17, 0.42) 25.52%,
+    hsl(var(--background) / 0.7) 52.2%,
+    hsl(var(--background) / 0.8) 76.6%,
+    hsl(var(--background) / 0.9) 90.6%,
+    hsl(var(--background)) 100%
+  );
+}
+@media (min-width: 768px) {
+  .scroll-container,
+  .scroll-area {
+    max-width: 100%;
+    /* max-height: 100dvh; */
+    min-height: 100dvh;
+  }
+}
+.full-screen-svh {
+  width: 100svh;
+  height: 100svh;
+  max-width: 100svw;
+  max-height: 100svh;
+  min-width: 100svw;
+  min-height: 100svh;
+}
+/* @media (min-width: 768px) {
+  .full-screen-svh {
+    max-width: 100svh;
+    min-width: 100svh;
+    max-height: 100svh;
+    min-height: 100svh;
+  }
+} */
