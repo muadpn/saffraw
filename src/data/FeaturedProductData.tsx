@@ -7,12 +7,12 @@ import {
   Almonds,
   SnowWhiteWalnut,
 } from "@/Assets";
-import { uuid } from "uuidv4";
+import { v4 as uuidv4 } from 'uuid';
 // import { FeaturedData } from "@/types/types";
-
+// const id ()
 export const FeatureProduct = [
   {
-    id: uuid(),
+    id: uuidv4(),
     Featuredimage: {
       image: SaffronBottle,
       altTag: "Saffron in bottle",
@@ -22,7 +22,7 @@ export const FeatureProduct = [
     price: "285",
   },
   {
-    id: uuid(),
+    id: uuidv4(),
     Featuredimage: {
       image: WallnutBasket,
       altTag: "Wallnut in Basket",
@@ -32,7 +32,7 @@ export const FeatureProduct = [
     price: "499",
   },
   {
-    id: uuid(),
+    id: uuidv4(),
     Featuredimage: {
       image: WallnutsKernels,
       altTag: "Wallnut Kernals",
@@ -42,7 +42,7 @@ export const FeatureProduct = [
     price: "599",
   },
   {
-    id: uuid(),
+    id: uuidv4(),
     Featuredimage: {
       image: Shilajit,
       altTag: "Shilajit",
@@ -52,7 +52,7 @@ export const FeatureProduct = [
     price: "899",
   },
   {
-    id: uuid(),
+    id: uuidv4(),
     Featuredimage: {
       image: SaffronStrand,
       altTag: "Saffron Strands",
@@ -62,7 +62,7 @@ export const FeatureProduct = [
     price: "285",
   },
   {
-    id: uuid(),
+    id: uuidv4(),
     Featuredimage: {
       image: Almonds,
       altTag: "Almonds full",

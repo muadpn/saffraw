@@ -29,7 +29,7 @@ const ProductBenefit = ({
       <MaxWidthWrapper>
         {/* {Overlay} */}
         <div className="pb-24 md:py-2">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="grid grid-cols-1 grid-rows-2 lg:grid-rows-none  lg:grid-cols-2">
             <div>
               <div className="relative">
                 <h1 className="text-5xl">
@@ -126,13 +126,13 @@ const ProductBenefit = ({
               {/* EnQuire Now ends  */}
             </div>
             <div className="flex items-center relative justify-center  pt-10 ">
-              <div className="flex items-center w-full h-full justify-center relative pt-10 max-w-[350px] object-cover rounded-lg max-h-[450px] ">
+              <div className="flex items-center w-full h-full justify-center relative pt-10  max-w-[350px]  rounded-lg max-h-[450px] ">
                 <Image
                   src={`/images/${image}`}
                   alt="SaffronFlower"
                   fill
                   className={cn(
-                    `object-cover rounded-lg -top-12 -z-10 `,
+                    `object-cover rounded-lg -top-12 -z-10  `,
                     ` border-${color.substring(3)} border-[2px] `
                   )}
                 />
